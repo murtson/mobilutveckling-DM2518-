@@ -167,7 +167,7 @@
   </head>
 
   <body ontouchstart="">
-    <div id="firstpage" class="container">
+    <div id="firstpage" class="container" style="margin: 5px">
       <div class="row">
         <div class="col-12 text-center">
           <h1 style="margin: 15px">Welcome to Chat Along!</h1>
@@ -197,6 +197,7 @@
               placeholder="Enter username!"
               id="username"
               name="username"
+              style=" border-radius: 2.5px; border: 2px solid #566573"
             />
             <button class="btn btn-info" type="submit">Select</button>
           </form>
@@ -207,11 +208,13 @@
       <p id="orientation"></p>
     </div>
 
-    <div id="chatroom">
+    <div id="chatroom" class="container" style="margin: 5px">
       <h1>Welcome: <span id="name"></span>!</h1>
       <!--dssassss -->
       <div id="room">
-        <h2>You're now in room: <i id="active_room"></i></h2>
+        <h2>
+          You're now in room: <i id="active_room" style="color: #ec7063"></i>
+        </h2>
       </div>
       <h3>Messages:</h3>
       <form onsubmit="sendMessage(event)">
@@ -222,7 +225,7 @@
           name="new-message"
           id="new-message"
         />
-        <button type="submit">
+        <button class="btn btn-success" type="submit">
           Send message!
         </button>
       </form>
