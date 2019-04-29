@@ -10,16 +10,25 @@
 
     <title>Labb 4</title>
 
-    <style>
-      /* @import "ui/css/evothings-app.css"; */
-    </style>
+    <!-- Latest compiled and minified CSS -->
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+      integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
+      crossorigin="anonymous"
+    />
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
-    <script>
-      // Redirect console.log to Evothings Workbench.
-      // if (window.hyper && window.hyper.log) {
-      //   dconsole.log = hyper.log;
-      // }
-    </script>
+    <!-- Popper JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 
     <!-- <script src="libs/jquery/jquery.js"></script> -->
     <script src="https://code.jquery.com/jquery-3.4.0.min.js"></script>
@@ -141,28 +150,60 @@
         alert("Doesn't work!");
       }
     </script>
-    <!-- Slut på koden med navigeringen, (del 2 i labben) -->
+
+    <style>
+      @import url("https://fonts.googleapis.com/css?family=Schoolbell");
+      @import url("https://fonts.googleapis.com/css?family=Indie+Flower");
+
+      body {
+        font-family: "Indie Flower", cursive;
+      }
+
+      i.far {
+        margin: 10px;
+        color: #ec7063;
+      }
+    </style>
   </head>
 
   <body ontouchstart="">
-    <div id="firstpage">
-      <h1>Welcome to Chat Along</h1>
-      <h2>
-        You join channels by pointing your mobilephone towards specific
-        directions. <i>North, </i><i>East, </i><i>South, </i><i>West</i>
-      </h2>
-      <h4>Please enter username to start chatting</h4>
-      <form onsubmit="enterChatroom(event)">
-        <input
-          type="text"
-          placeholder="Enter username!"
-          id="username"
-          name="username"
-        />
-        <button type="submit">Select</button>
-      </form>
+    <div id="firstpage" class="container">
+      <div class="row">
+        <div class="col-12 text-center">
+          <h1 style="margin: 15px">Welcome to Chat Along!</h1>
+        </div>
+      </div>
 
-      <pre>version 21</pre>
+      <div class="row">
+        <div class="col-12">
+          <h2>
+            <i class="far fa-compass"></i> You join channels by pointing your
+            mobilephone towards specific directions. <i>North, </i><i>East, </i
+            ><i>South, </i><i>West</i>
+          </h2>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-12">
+          <h2>
+            <i class="far fa-user"></i>Please enter your username down below to
+            start chatting!
+          </h2>
+
+          <form onsubmit="enterChatroom(event)">
+            <input
+              type="text"
+              placeholder="Enter username!"
+              id="username"
+              name="username"
+            />
+            <button class="btn btn-info" type="submit">Select</button>
+          </form>
+        </div>
+      </div>
+
+      <pre><i>version 21</i></pre>
       <p id="orientation"></p>
     </div>
 
