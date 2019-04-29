@@ -64,10 +64,13 @@
           let newMessage = document.createElement("p");
           newMessage.innerHTML =
             "From: " +
-            <span style="#85C1E9">message.message.from</span> +
+            message.message.from +
             "<br />" +
             "Message: " +
-            message.message.message;
+            message.message.message +
+            "<br />" +
+            "Room: " +
+            message.message.channel;
 
           document.getElementById("messages").appendChild(newMessage);
           // document.getElementById("message").innerHTML = message_array;
