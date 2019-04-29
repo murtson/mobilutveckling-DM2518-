@@ -64,8 +64,9 @@
           let newMessage = document.createElement("p");
           newMessage.innerHTML =
             "From: " +
-            message.message.from +
+            <span style="#85C1E9">message.message.from</span> +
             "<br />" +
+            "Message: " +
             message.message.message;
 
           document.getElementById("messages").appendChild(newMessage);
