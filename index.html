@@ -111,6 +111,7 @@
 
     <!-- Script för navigering av mobil, koodianater -->
     <script>
+      let previous_orientation = "";
       // // Get event data
       function deviceOrientationListener(event) {
         let element = document.getElementById("orientation");
@@ -133,13 +134,29 @@
         } */
 
         if (alpha.toFixed([0]) > 315 || alpha.toFixed([0]) < 45) {
-          subscribeToChannel("North");
+          if (previous_orientation != "North") {
+            previous_orientation = "North";
+            document.getElementById("messages").innerHTML = ""; // Tömmer chat-fältet när man går in i nytt rum.
+            subscribeToChannel("North");
+          }
         } else if (alpha.toFixed([0]) > 45 && alpha.toFixed([0]) < 135) {
-          subscribeToChannel("West");
+          if (previous_orientation != "West") {
+            previous_orientation = "West";
+            document.getElementById("messages").innerHTML = "";
+            subscribeToChannel("West");
+          }
         } else if (alpha.toFixed([0]) > 135 && alpha.toFixed([0]) < 225) {
-          subscribeToChannel("South");
+          if (previous_orientation != "South") {
+            previous_orientation = "South";
+            document.getElementById("messages").innerHTML = "";
+            subscribeToChannel("South");
+          }
         } else if (alpha.toFixed([0]) > 225 && alpha.toFixed([0]) < 314) {
-          subscribeToChannel("East");
+          if (previous_orientation != "East") {
+            previous_orientation = "East";
+            document.getElementById("messages").innerHTML = "";
+            subscribeToChannel("East");
+          }
         }
       }
 
